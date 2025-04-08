@@ -13,6 +13,8 @@ public class Nutrients
 
     public int Proteins { get; set; }
 
+    public int Fiber {get; set;}
+
     public int CurrentBodyWeight { get; set; }
     public DateOnly CreationDate { get; set; }
 }

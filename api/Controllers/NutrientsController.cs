@@ -61,6 +61,7 @@ public class NutrientsController : Controller
             Carbohidrates = nutrientDto.Carbohidrates,
             Fats = nutrientDto.Fats,
             Proteins = nutrientDto.Proteins,
+            Fiber = nutrientDto.Fiber,
             CurrentBodyWeight = nutrientDto.CurrentBodyWeight,
             CreationDate = DateOnly.FromDateTime(DateTime.Now)
         };

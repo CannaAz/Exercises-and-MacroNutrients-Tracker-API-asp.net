@@ -43,6 +43,7 @@ public class NutrientRepository : INutrientsRepository
         currentNutrient.Carbohidrates = NutrientsDto.carbohidrates;
         currentNutrient.Fats = NutrientsDto.fats;
         currentNutrient.Proteins = NutrientsDto.proteins;
+        currentNutrient.Fiber = NutrientsDto.Fiber;
 
         await _context.SaveChangesAsync();
         throw new NotImplementedException();

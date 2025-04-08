@@ -46,10 +46,16 @@ builder.Services.AddSwaggerGen(option =>
     });
 });
 
-var connString = builder.Configuration.GetConnectionString("ExerciseDbConnectionString");
-builder.Services.AddDbContext<AppDbContext>(
-    options => options.UseSqlite(connString)
-);
+var connString = builder.Configuration.GetConnectionString("ExerciseDbConnectionString") ?? throw new InvalidOperationException("Connection string 'ExerciseDbConnectionString' not found.");
+if(builder.Environment.IsDevelopment())
+{
+    builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(connString));
+}
+else 
+{
+    builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connString));
+}
+
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(
     options => {

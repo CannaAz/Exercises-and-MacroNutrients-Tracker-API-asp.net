@@ -29,6 +29,7 @@ public class NutrientRepositoryTest
                         Carbohidrates = random.Next(180, 235),
                         Fats = random.Next(100, 230),
                         Proteins = random.Next(80, 180),
+                        Fiber = random.Next(10, 40),
                         CurrentBodyWeight = random.Next(50, 150),
                     }
                 );

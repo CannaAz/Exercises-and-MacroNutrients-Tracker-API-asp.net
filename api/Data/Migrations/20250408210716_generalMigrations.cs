@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace api.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class SecondCreate : Migration
+    public partial class generalMigrations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -58,7 +58,7 @@ namespace api.Data.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    UserId = table.Column<int>(type: "INTEGER", nullable: false),
+                    UserId = table.Column<string>(type: "TEXT", nullable: true),
                     ExerciseName = table.Column<string>(type: "TEXT", nullable: true),
                     Weight = table.Column<int>(type: "INTEGER", nullable: false),
                     Repetitions = table.Column<int>(type: "INTEGER", nullable: false),
@@ -82,6 +82,7 @@ namespace api.Data.Migrations
                     Carbohidrates = table.Column<int>(type: "INTEGER", nullable: false),
                     Fats = table.Column<int>(type: "INTEGER", nullable: false),
                     Proteins = table.Column<int>(type: "INTEGER", nullable: false),
+                    Fiber = table.Column<int>(type: "INTEGER", nullable: false),
                     CurrentBodyWeight = table.Column<int>(type: "INTEGER", nullable: false),
                     CreationDate = table.Column<DateOnly>(type: "TEXT", nullable: false)
                 },
@@ -201,8 +202,8 @@ namespace api.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "14a5bd17-d1dc-4cad-a515-bd91d8acdfd6", null, "Admin", "ADMIN" },
-                    { "6a13a875-f949-4e7f-8bfe-e23a61f468a1", null, "User", "USER" }
+                    { "3934745a-4f43-4934-9c54-6fde487398a3", null, "Admin", "ADMIN" },
+                    { "cbcda0a8-0b8c-45d5-8e55-50ea4d0b82a5", null, "User", "USER" }
                 });
 
             migrationBuilder.CreateIndex(

@@ -13,5 +13,7 @@ public record class CreateNutrientDto
     [Required]
     public int Proteins { get; set; }
     [Required]
+    public int Fiber {get; set;}
+    [Required]
     public int CurrentBodyWeight { get; set; }
 }

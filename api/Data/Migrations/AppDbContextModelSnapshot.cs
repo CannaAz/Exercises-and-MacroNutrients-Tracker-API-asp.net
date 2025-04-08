@@ -45,13 +45,13 @@ namespace api.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "14a5bd17-d1dc-4cad-a515-bd91d8acdfd6",
+                            Id = "3934745a-4f43-4934-9c54-6fde487398a3",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "6a13a875-f949-4e7f-8bfe-e23a61f468a1",
+                            Id = "cbcda0a8-0b8c-45d5-8e55-50ea4d0b82a5",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -244,8 +244,8 @@ namespace api.Data.Migrations
                     b.Property<int>("Series")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Weight")
                         .HasColumnType("INTEGER");
@@ -274,6 +274,9 @@ namespace api.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Fats")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Fiber")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Proteins")

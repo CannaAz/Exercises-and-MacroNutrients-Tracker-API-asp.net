@@ -82,6 +82,5 @@ public class AccountController : Controller
         {
             return StatusCode(500, ex);
         }
-        throw new NotImplementedException();
     }
 }
